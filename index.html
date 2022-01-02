@@ -9,17 +9,18 @@
     <title>The Tenor Gif</title>
 </head>
 <body>
-    <header><h1>The Tenor GIF</h1></header>
+    
     <div class="container">
-        <div id='tenorSearch'>
-            <label>Subject</label>
-            <input type="text" id='subject' placeholder="Input subject">
-            <br>
-            <label>Number of gifs</label>
-            <input type="number" min=1 id='number'>
-            <br>
-            <button id='searchBtn'>Get tenor gif</button>
-        </div>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">The Tenor GIF</h1>
+                <div class="d-flex">
+                    <input id='subject' class="form-control me-2" type="search" placeholder="Search subject" aria-label="Search">
+                    <input id='number' class="form-control me-2" type="number" placeholder="Input number" min= 1  aria-label="Number">
+                    <button class="btn btn-outline-success" type="button" id='searchBtn'>Search</button>
+                </div>
+            </div>
+        </nav>
         <div id='tenorDisplay'></div>
 
     </div>

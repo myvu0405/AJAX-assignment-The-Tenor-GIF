@@ -8,10 +8,11 @@ button.addEventListener('click', tenorSearch);
 
 function tenorSearch()
 {
-    let xhr = new XMLHttpRequest();
+    
     let my_subject = subject.value;
     let my_number = num.value;
-    
+    /*
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', `https://api.tenor.com/v1/search?q=${my_subject}&key=${my_key}&limit=${my_number}`, true);
 
     xhr.onload = function (){
@@ -32,5 +33,20 @@ function tenorSearch()
     };
 
     xhr.send();
+    */
+   fetch(`https://api.tenor.com/v1/search?q=${my_subject}&key=${my_key}&limit=${my_number}`)
+   .then(res=>res.json())
+   .then(data => {
+       let responseTenors=data.results
+       display.innerHTML='';
+            responseTenors.forEach ((tenor)  => {
+                
+                display.innerHTML+=`<img src=${tenor.media[0].gif.url} class='gif img-thumbnail'>`;
+                
+            });
+    })
+   .catch((error) => {
+    console.error('Error:', error);
+  })
 }
 
