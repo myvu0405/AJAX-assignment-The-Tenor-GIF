@@ -11,6 +11,11 @@ function tenorSearch()
     
     let my_subject = subject.value;
     let my_number = num.value;
+    
+    if (my_subject=='' || my_number=='') {
+        display.innerHTML="<p class='error'>Please enter a subject and a number!</p>";
+        return;
+    }
     /*
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `https://api.tenor.com/v1/search?q=${my_subject}&key=${my_key}&limit=${my_number}`, true);

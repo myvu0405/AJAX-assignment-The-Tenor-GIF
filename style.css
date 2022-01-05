@@ -3,3 +3,9 @@
     height: 220px;
     padding:10px;
 }
+.error{
+    color: red;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
