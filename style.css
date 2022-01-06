@@ -4,8 +4,13 @@
     padding:10px;
 }
 .error{
+    width: 70%;
+   
     color: red;
-    font-size: large;
+    margin: 20px auto;
+    font-size: xx-large;
     font-weight: bold;
     text-align: center;
+    background: yellow;
+    border-radius: 10px;
 }
